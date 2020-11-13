@@ -16,7 +16,8 @@ class TrangChuController extends Controller
     {
         //
         $sanPham = DB::table('sanpham')->get();
-        return view('client.index', compact('sanPham'));
+        $banner = DB::table('banner')->get();
+        return view('client.index', compact('sanPham','banner'));
     }
 
     public function productDetail($idProduct)

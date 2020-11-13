@@ -35,6 +35,10 @@ Route::group(['middleware' => ['checkNhanVien']], function () {
 
         #thong ke
         Route::get('thong-ke', 'ThongKeController@index')->name('thong-ke');
+
+        #banner
+        Route::get('banner', 'BannerController@index')->name('get-banner');
+        Route::post('add-banner', 'BannerController@store')->name('add-banner');
     });
 });
 
